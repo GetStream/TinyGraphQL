@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TinyGraphQL'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'A lightweight and easy-to-use GraphQL client for Swift'
 
   s.swift_version = '5.2'
@@ -28,7 +28,7 @@ A lightweight and easy-to-use GraphQL client for Swift
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'cardoso' => 'matheus@getstream.io' }
-  s.source           = { :git => 'https://github.com/GetStream/TinyGraphQL', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/GetStream/TinyGraphQL.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/getstream_io'
 
   s.ios.deployment_target = '11.0'
