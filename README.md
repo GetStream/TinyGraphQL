@@ -64,6 +64,30 @@ graphQL.query("organizationById", ["_id": id]) {
 }
 ```
 
+## Installation
+
+TinyGraphQL supports all three major dependency managers (SPM, CocoaPods, and Carthage)
+
+### SPM
+
+```swift
+.package(name: "TinyGraphQL", url: "https://github.com/getstream/TinyGraphQL", from: "0.0.2")
+```
+
+### CocoaPods
+
+```ruby
+pod 'TinyGraphQL', '~> 1.0'
+```
+
+### Carthage
+
+```
+github "getstream/TinyGraphQL" ~> 1.0
+```
+
+
+
 [swift-badge]: https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat
 [swift-url]: https://swift.org
 
