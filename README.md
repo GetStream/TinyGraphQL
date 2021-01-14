@@ -16,8 +16,7 @@ TinyGraphQL is a simple and lightweight query builder for the Swift language wit
 
 #### Raw GraphQL
 
-```swift
-"""
+```graphql
 mutation {
     getOrCreateUser(record: { name: "(name)", email: "(email)" }) {
         _id
@@ -25,7 +24,6 @@ mutation {
         streamToken
     }
 }
-"""
 ```
 
 #### TinyGraphQL
@@ -42,8 +40,7 @@ graphQL.mutation("getOrCreateUser", ["record": ["name": name, "email": email]]) 
 
 #### Raw GraphQL
 
-```swift
-"""
+```graphql
 query {
     organizationById(_id: "(id)") {
         name
@@ -53,7 +50,6 @@ query {
         agentCount
     }
 }
-"""
 ```
 
 #### TinyGraphQL
