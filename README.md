@@ -12,6 +12,15 @@ TinyGraphQL is a simple and lightweight query builder for the Swift language wit
 
 ## Snippets
 
+### Initialization
+
+```swift
+let graphQL = TinyGraphQL(
+    url: URL(string: "https://api.combase.app/graphql")!,
+    headers: ["Content-Type": "application/json", "combase-organization": "5fd7ecb251b33b10c380977b"]
+)
+```
+
 ### Query
 
 #### Raw GraphQL
