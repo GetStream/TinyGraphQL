@@ -29,6 +29,7 @@ TinyGraphQL is a simple and lightweight query builder for the Swift language wit
   * [SPM](#spm)
   * [CocoaPods](#cocoapods)
   * [Carthage](#carthage)
+- [Adopters](#adopters)
 
 ## Snippets
 
@@ -159,7 +160,7 @@ github "getstream/TinyGraphQL" ~> 1.0
 
 - [Combase][combase-url]: Combase is an Open Source white-label chat solution that provides everything you need to instantly spin up a powerful, real-time customer support dashboard. TinyGraphQL is used by the [Combase Swift SDK][combase-swift-url].
 
-<small>If you use TinyGraphQL, I'd love your support by [opening a PR](https://github.com/GetStream/TinyGraphQL/edit/main/README.md) and including your project or company in this list!</small>
+<i>If you use TinyGraphQL, you can show your support by [opening a PR](https://github.com/GetStream/TinyGraphQL/edit/main/README.md) and including your project or company in this list!</i>
 
 [swift-badge]: https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat
 [swift-url]: https://swift.org
