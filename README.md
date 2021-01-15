@@ -4,6 +4,7 @@
 [![CI Status][ci-badge]][ci-url]
 [![Cocoapods][cocoapods-badge]][cocoapods-url]
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/Streamoji)
+![SPM & Carthage compatible][spm-carthage-badge]
 [![License][license-badge]][license-url]
 [![Twitter Follow][follow-badge]][follow-url]
 [![Twitter][tweet-badge]][tweet-url]
@@ -170,6 +171,8 @@ github "getstream/TinyGraphQL" ~> 1.0
 
 [cocoapods-badge]: https://img.shields.io/cocoapods/v/TinyGraphQL
 [cocoapods-url]: https://cocoapods.org/pods/TinyGraphQL
+
+[spm-carthage-badge]: https://img.shields.io/badge/SPM%20%26%20Carthage-compatible-green
 
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg?style=flat
 [license-url]: https://tldrlegal.com/license/mit-license
