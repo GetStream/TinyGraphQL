@@ -153,7 +153,9 @@ pod 'TinyGraphQL', '~> 1.0'
 github "getstream/TinyGraphQL" ~> 1.0
 ```
 
+## Adopters
 
+- [Combase][combase-url]: Combase is an Open Source white-label chat solution that provides everything you need to instantly spin up a powerful, real-time customer support dashboard. TinyGraphQL is used by the [Combase Swift SDK][combase-swift-url].
 
 [swift-badge]: https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat
 [swift-url]: https://swift.org
@@ -172,3 +174,6 @@ github "getstream/TinyGraphQL" ~> 1.0
 
 [tweet-badge]: https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2FGetStream%2FStreamoji
 [tweet-url]: https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FGetStream%2FTinyGraphQL
+
+[combase-url]: https://comba.se
+[combase-swift-url]: https://github.com/getstream/combase-swift
