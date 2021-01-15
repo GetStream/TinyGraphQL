@@ -32,7 +32,7 @@ TinyGraphQL is a simple and lightweight query builder for the Swift language wit
 
 ### Initialization
 
-TinyGraphQL is also a container for configuring your requests. In the initialization step, you should specify the URL for the GraphQL endpoint and any HTTP headers you'd need for the requests.
+TinyGraphQL is also a container for pre-configuring your requests. In the initialization step, you should specify the URL for the GraphQL endpoint and any HTTP headers you'd need for the requests.
 
 ```swift
 let graphQL = TinyGraphQL(
@@ -98,6 +98,8 @@ graphQL.mutation("getOrCreateUser", ["record": ["name": name, "email": email]]) 
 ```
 
 ### Request
+
+Making a request without TinyGraphQL is quite tedious and error prone. With TinyGraphQL, it's safe and easy. Look below at a comparison between building the request yourself and having TinyGraphQL do it for you.
 
 #### Raw GraphQL + URLSession 
 
