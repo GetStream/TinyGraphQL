@@ -12,5 +12,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Build and Test
+      - name: Build and Test (iOS)
         run: xcodebuild -scheme TinyGraphQL test -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+      - name: Build and Test (macOS)
+        run: swift test
