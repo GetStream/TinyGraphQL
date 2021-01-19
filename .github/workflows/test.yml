@@ -1,0 +1,43 @@
+name: test
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - swift:5.2-xenial
+          - swift:5.2-bionic
+          - swiftlang/swift:nightly-5.2-xenial
+          - swiftlang/swift:nightly-5.2-bionic
+          - swiftlang/swift:nightly-5.3-xenial
+          - swiftlang/swift:nightly-5.3-bionic
+          - swiftlang/swift:nightly-master-xenial
+          - swiftlang/swift:nightly-master-bionic
+          - swiftlang/swift:nightly-master-focal
+          - swiftlang/swift:nightly-master-centos8
+          - swiftlang/swift:nightly-master-amazonlinux2
+    container: ${{ matrix.image }}
+    env:
+      LOG_LEVEL: info
+    steps:  
+      - name: Checkout TinyGraphQL
+        uses: actions/checkout@v2
+      - name: Run base tests with Thread Sanitizer
+        run: swift test --enable-test-discovery --sanitize=thread
+  macOS_iOS:
+    env:
+      LOG_LEVEL: info
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build and Test (iOS)
+        run: xcodebuild -scheme TinyGraphQL test -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12'
+      - name: Build and Test (macOS)
+        run: swift test
