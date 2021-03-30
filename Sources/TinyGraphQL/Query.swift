@@ -1,12 +1,3 @@
-//
-//  query.swift
-//  TinyGraphQL
-//
-//  Created by Matheus Cardoso on 30/03/21.
-//
-
-import Foundation
-
 struct Query: Operation {
     var type: OperationType { .query }
     var name: String

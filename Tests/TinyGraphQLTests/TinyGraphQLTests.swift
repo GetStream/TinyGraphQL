@@ -60,12 +60,6 @@ final class TinyGraphQLTests: XCTestCase {
         let expectedBody = "{\n    \"query\": \"mutation { hello(hey: \\\"sup\\\"){name, hey(hey: \\\"sup\\\"){hey(lala: \\\"lala\\\")}, byebye} }\"\n}"
         
         XCTAssertEqual(bodyString, expectedBody)
-        
-        Query("user", ["login": "cardoso"]) {
-            Field("id")
-            Field("name")
-            Field("email")
-        }
     }
 
     static var allTests = [

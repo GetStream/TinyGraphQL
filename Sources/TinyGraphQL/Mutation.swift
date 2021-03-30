@@ -1,10 +1,3 @@
-//
-//  mutation.swift
-//  TinyGraphQL
-//
-//  Created by Matheus Cardoso on 30/03/21.
-//
-
 struct Mutation: Operation {
     var type: OperationType { .mutation }
     var name: String

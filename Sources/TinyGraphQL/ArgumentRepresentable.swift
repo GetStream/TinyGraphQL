@@ -8,7 +8,7 @@ extension String: ArgumentRepresentable {
     }
 }
 
-extension KeyValuePairs: ArgumentRepresentable where Key == String, Value == String {
+extension Dictionary: ArgumentRepresentable where Key == String, Value == String {
     public var argumentRepresentation: String {
         var result = "{"
         result += self.map { "\($0.key): \"\($0.value)\"" }.joined(separator: ", ")
