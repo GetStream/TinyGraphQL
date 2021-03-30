@@ -1,12 +1,20 @@
 import Foundation
 
-struct Operation: CustomStringConvertible {
-    var type: OperationType
-    var name: String
-    var arguments: [String: ArgumentRepresentable]
-    var fields: [Field]
+public protocol Operation: CustomStringConvertible {
+    var type: OperationType { get }
+    var name: String { get }
+    var arguments: [String: ArgumentRepresentable] { get }
+    var fields: [Field] { get }
     
+    var description: String { get }
+}
+
+extension Operation {
     var description: String {
+        parseBody()
+    }
+    
+    func parseBody() -> String {
         var result = name
 
         if !arguments.isEmpty {
@@ -21,11 +29,6 @@ struct Operation: CustomStringConvertible {
             result += "}"
         }
         
-        switch type {
-        case .query:
-            return result
-        case .mutation:
-            return "mutation { \(result) }"
-        }
+        return result
     }
 }

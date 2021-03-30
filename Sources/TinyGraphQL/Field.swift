@@ -1,10 +1,10 @@
-struct Field: CustomStringConvertible {
+public struct Field {
     var name: String
-    var arguments: [String: String]
+    var arguments: [String: ArgumentRepresentable]
     var fields: [Field]
     
-    var description: String {
-        var result = "\(name)"
+    public var description: String {
+        var result = name
         
         if !arguments.isEmpty {
             result += "("
@@ -19,5 +19,25 @@ struct Field: CustomStringConvertible {
         }
         
         return result
+    }
+    
+    init(
+        _ name: String,
+        _ arguments: [String: ArgumentRepresentable] = [:],
+        @FieldBuilder _ fields: FieldBuilder.Closure = { [] }
+    ) {
+        self.name = name
+        self.arguments = arguments
+        self.fields = fields().map { $0.fieldRepresentation }
+    }
+    
+    init(
+        name: String,
+        arguments: [String: ArgumentRepresentable] = [:],
+        fields: [Field]
+    ) {
+        self.name = name
+        self.arguments = arguments
+        self.fields = fields
     }
 }

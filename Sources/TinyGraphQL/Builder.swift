@@ -1,22 +1,9 @@
-protocol Builder {    
-    associatedtype T
-    
-    typealias BuilderClosure = (Self) -> ()
-    
-    init()
-    
-    static func build(buildClosure: BuilderClosure?) -> T
-    func build(buildClosure: BuilderClosure?) -> T
-    
-    func finish() -> T
+@_functionBuilder
+public final class Builder<T> {
+    public typealias Closure = () -> [T]
+    static func buildBlock(_ children: T...) -> [T] {
+        children
+    }
 }
 
-extension Builder {
-    static func build(buildClosure: BuilderClosure? = nil) -> T {
-        return Self().build(buildClosure: buildClosure)
-    }
-    func build(buildClosure: BuilderClosure? = nil) -> T {
-        buildClosure?(self)
-        return finish()
-    }
-}
+public typealias FieldBuilder = Builder<FieldRepresentable>

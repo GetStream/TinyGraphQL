@@ -1,4 +1,4 @@
-enum OperationType: String {
+public enum OperationType: String {
     case query
     case mutation
 }
