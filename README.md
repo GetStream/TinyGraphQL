@@ -1,4 +1,4 @@
-# TinyGraphQL (WIP)
+# TinyGraphQL
 
 [![Swift][swift-badge]][swift-url]
 [![CI Status][ci-badge]][ci-url]
