@@ -1,17 +1,14 @@
-struct Mutation: Operation {
-    var type: OperationType { .mutation }
-    var name: String
-    var arguments: [String: ArgumentRepresentable]
-    var fields: [Field]
-    
-    var description: String {
-        return "mutation { \(parseBody()) }"
-   }
+class Mutation: MutationOperation {
+    typealias Arguments = [String: ArgumentRepresentable]
+
+    let name: String
+    let arguments: Arguments
+    let fields: [Field]
     
     init(
         _ name: String,
-        _ arguments: [String: ArgumentRepresentable] = [:],
-        @FieldBuilder fields: FieldBuilder.Closure
+        _ arguments: Arguments,
+        @FieldBuilder fields: Builder<FieldRepresentable>.Closure
     ) {
         self.name = name
         self.arguments = arguments

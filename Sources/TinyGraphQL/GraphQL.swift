@@ -3,7 +3,7 @@ import Foundation
 import FoundationNetworking
 #endif
 
-public struct TinyGraphQL {
+public struct GraphQL {
     let url: URL
     let headers: [String: String]
     
@@ -12,7 +12,7 @@ public struct TinyGraphQL {
         self.headers = headers
     }
 
-    public func request(for operation: Operation) -> URLRequest {
+    public func request<O: Operation>(for operation: O) -> URLRequest {
         switch operation.type {
         case .query:
             let query = "?query={\(operation)}".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

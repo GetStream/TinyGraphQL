@@ -1,13 +1,14 @@
-struct Query: Operation {
-    var type: OperationType { .query }
-    var name: String
-    var arguments: [String: ArgumentRepresentable]
-    var fields: [Field]
+class Query: QueryOperation {
+    typealias Arguments = [String: ArgumentRepresentable]
+    
+    let name: String
+    let arguments: Arguments
+    let fields: [Field]
     
     init(
         _ name: String,
-        _ arguments: [String: ArgumentRepresentable] = [:],
-        @FieldBuilder fields: FieldBuilder.Closure
+        _ arguments: Arguments,
+        @Builder<FieldRepresentable> fields: Builder<FieldRepresentable>.Closure
     ) {
         self.name = name
         self.arguments = arguments
