@@ -1,4 +1,4 @@
-class Query: QueryOperation {
+struct Query: QueryOperation {
     typealias Arguments = [String: ArgumentRepresentable]
     
     let name: String

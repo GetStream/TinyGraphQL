@@ -1,4 +1,4 @@
-class Mutation: MutationOperation {
+struct Mutation: MutationOperation {
     typealias Arguments = [String: ArgumentRepresentable]
 
     let name: String
