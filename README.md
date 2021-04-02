@@ -66,12 +66,12 @@ query {
 #### TinyGraphQL
 
 ```swift
-graphQL.query("organizationById", ["_id": id]) {
-    $0.field("name")
-    $0.field("stream") {
-        $0.field("key")
+Query("organizationById", ["_id": id]) {
+    "name"
+    Field("stream") {
+        "key"
     }
-    $0.field("agentCount")
+    "agentCount"
 }
 ```
 
@@ -94,10 +94,10 @@ mutation {
 #### TinyGraphQL
 
 ```swift
-graphQL.mutation("getOrCreateUser", ["record": ["name": name, "email": email]]) {
-    $0.field("_id")
-    $0.field("name")
-    $0.field("streamToken")
+Mutation("getOrCreateUser", ["record": ["name": name, "email": email]]) {
+    "_id"
+    "name"
+    "streamToken"
 }
 ```
 
@@ -126,9 +126,15 @@ URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, response
 #### TinyGraphQL + URLSession
 
 ```swift
-let urlRequest = graphQL.mutation("createTicket", ["message": message, "user": userId]) {
-    $0.field("_id")
+let query = Query("organizationById", ["_id": id]) {
+    "name"
+    Field("stream") {
+        "key"
+    }
+    "agentCount"
 }
+
+let urlRequest = graphQL.request(for: query)
 
 URLSession.shared.dataTask(with: urlRequest, completionHandler: { data, response, error in
     // handle response
