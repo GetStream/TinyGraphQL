@@ -11,6 +11,8 @@
 
 TinyGraphQL is a simple and lightweight query builder for the Swift language with zero dependencies. It provides a syntax close to that of GraphQL while preventing you from making time-consuming syntax mistakes.
 
+Made with 💘 by the folks @ [Stream](https://getstream.io).
+
 <img align="right" src="https://i.imgur.com/lZLvgFa.png" width="60%" />
 
 ## Table of Contents
