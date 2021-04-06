@@ -97,7 +97,7 @@ final class TinyGraphQLTests: XCTestCase {
             return
         }
 
-        XCTAssertEqual(queryString, "query=%7Buser%7Bname,%20id%7D%7D")
+        XCTAssertEqual(queryString, "query=%7Buser(login:%20%22cardoso%22)%7Bname,%20id%7D%7D")
     }
 
     static var allTests = [
