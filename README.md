@@ -1,4 +1,4 @@
-# TinyGraphQL
+<img align="center" src="https://i.imgur.com/RvHoYJO.jpg" width="100%" />
 
 [![Swift][swift-badge]][swift-url]
 [![CI Status][ci-badge]][ci-url]
