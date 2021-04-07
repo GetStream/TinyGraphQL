@@ -1,11 +1,11 @@
-struct Mutation: MutationOperation {
-    typealias Arguments = [String: ArgumentRepresentable]
+public struct Mutation: MutationOperation {
+    public typealias Arguments = [String: ArgumentRepresentable]
 
-    let name: String
-    let arguments: Arguments
-    let fields: [Field]
+    public var name: String
+    public var arguments: Arguments
+    public var fields: [Field]
     
-    init(
+    public init(
         _ name: String,
         _ arguments: Arguments,
         @FieldBuilder fields: Builder<FieldRepresentable>.Closure

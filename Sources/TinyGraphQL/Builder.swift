@@ -1,7 +1,7 @@
 @_functionBuilder
 public final class Builder<T> {
     public typealias Closure = () -> [T]
-    static func buildBlock(_ children: T...) -> [T] {
+    public static func buildBlock(_ children: T...) -> [T] {
         children
     }
 }

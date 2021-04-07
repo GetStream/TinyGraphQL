@@ -1,11 +1,11 @@
-struct Query: QueryOperation {
-    typealias Arguments = [String: ArgumentRepresentable]
+public struct Query: QueryOperation {
+    public typealias Arguments = [String: ArgumentRepresentable]
     
-    let name: String
-    let arguments: Arguments
-    let fields: [Field]
+    public let name: String
+    public let arguments: Arguments
+    public let fields: [Field]
     
-    init(
+    public init(
         _ name: String,
         _ arguments: Arguments,
         @Builder<FieldRepresentable> fields: Builder<FieldRepresentable>.Closure

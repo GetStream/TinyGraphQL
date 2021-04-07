@@ -4,8 +4,8 @@ import FoundationNetworking
 #endif
 
 public struct GraphQL {
-    let url: URL
-    let headers: [String: String]
+    public var url: URL
+    public var headers: [String: String]
     
     public init(url: URL, headers: [String: String] = [:]) {
         self.url = url

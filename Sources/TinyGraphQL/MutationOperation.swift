@@ -3,9 +3,9 @@ protocol MutationOperation: Operation {
 }
 
 extension MutationOperation {
-    var type: OperationType { .mutation }
+    public var type: OperationType { .mutation }
     
-    var description: String {
+    public var description: String {
         return "mutation { \(parseBody()) }"
    }
 }

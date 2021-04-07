@@ -1,7 +1,7 @@
 public struct Field {
-    var name: String
-    var arguments: [String: ArgumentRepresentable]
-    var fields: [Field]
+    public var name: String
+    public var arguments: [String: ArgumentRepresentable]
+    public var fields: [Field]
     
     public var description: String {
         var result = name
@@ -21,7 +21,7 @@ public struct Field {
         return result
     }
     
-    init(
+    public init(
         _ name: String,
         _ arguments: [String: ArgumentRepresentable] = [:],
         @FieldBuilder _ fields: FieldBuilder.Closure = { [] }

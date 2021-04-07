@@ -12,7 +12,7 @@ public protocol Operation: CustomStringConvertible {
 }
 
 extension Operation {
-    var description: String {
+    public var description: String {
         parseBody()
     }
     

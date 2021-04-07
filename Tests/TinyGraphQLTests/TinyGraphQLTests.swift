@@ -1,5 +1,5 @@
 import XCTest
-@testable import TinyGraphQL
+import TinyGraphQL
 
 final class TinyGraphQLTests: XCTestCase {
     let graphQL = GraphQL(

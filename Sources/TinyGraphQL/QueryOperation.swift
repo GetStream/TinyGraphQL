@@ -1,7 +1,7 @@
-protocol QueryOperation: Operation {
+public protocol QueryOperation: Operation {
     
 }
 
 extension QueryOperation {
-    var type: OperationType { .query }
+    public var type: OperationType { .query }
 }
