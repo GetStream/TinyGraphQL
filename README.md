@@ -42,7 +42,7 @@ TinyGraphQL is also a container for pre-configuring your requests. In the initia
 
 ```swift
 let graphQL = TinyGraphQL(
-    url: URL(string: "https://api.combase.app/graphql")!,
+    url: URL(string: "https://api.my.app/graphql")!,
     headers: ["Content-Type": "application/json", "combase-organization": "5fd7ecb251b33b10c380977b"]
 )
 ```
