@@ -4,6 +4,11 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
   linux:
     runs-on: ubuntu-latest
