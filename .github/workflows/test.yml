@@ -28,7 +28,7 @@ jobs:
   macOS_iOS:
     env:
       LOG_LEVEL: info
-    runs-on: macos-latest
+    runs-on: { group: scaleway-macos }
     steps:
       - name: Checkout
         uses: actions/checkout@v2
